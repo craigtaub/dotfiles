@@ -1,0 +1,16 @@
+'*.source.js':
+  'mocha-d':
+    'prefix': 'mocha-d'
+    'body': """
+      describe(\'something\', () => {
+          ${1:""}
+      });
+    """
+
+  'mocha-it':
+    'prefix': 'mocha-it'
+    'body': """
+      it(\'something\', () => {
+          ${1:""}
+      });
+    """

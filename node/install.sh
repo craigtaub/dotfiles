@@ -8,11 +8,7 @@ else
     cd "$NVM_DIR" && git pull origin master > /dev/null && git checkout `git describe --abbrev=0 --tags` > /dev/null
 fi;
 
-cd -
-
-# https://github.com/nolanlawson/local-npm-launch-agent
-if [ ! -d ~/.local-npm ]
+if test ! $(which eslint)
 then
-    echo "Installing local-npm"
-    curl -sL https://raw.githubusercontent.com/nolanlawson/local-npm-launch-agent/master/script.py | python - > /dev/null
+  sudo npm install eslint -g
 fi

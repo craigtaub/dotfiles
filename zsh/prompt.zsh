@@ -2,6 +2,8 @@ autoload colors && colors
 # cheers, @ehrenmurdick
 # http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
 
+export LS_COLORS="red"
+
 if (( $+commands[git] ))
 then
   git="$commands[git]"
@@ -20,9 +22,9 @@ git_dirty() {
   else
     if [[ $($git status --porcelain) == "" ]]
     then
-      echo "on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
+      echo "(%{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%})"
     else
-      echo "on %{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%}"
+      echo "(%{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%})"
     fi
   fi
 }
@@ -34,7 +36,9 @@ git_prompt_info () {
 }
 
 unpushed () {
-  $git cherry -v @{upstream} 2>/dev/null
+  #$git cherry -v @{upstream} 2>/dev/null
+  ## use origin, that is upsteam, above it too noisy
+  $git cherry -v origin 2>/dev/null
 }
 
 need_push () {
@@ -50,7 +54,10 @@ directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'$(directory_name) $(git_dirty)$(need_push)› '
+## Load NVM...for some reason needed here
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+export PROMPT=$'$(directory_name)$(git_dirty)$(need_push)› '
 # $(need_push)\n› ' - above for new line
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"

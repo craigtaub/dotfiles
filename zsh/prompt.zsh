@@ -22,9 +22,9 @@ git_dirty() {
   else
     if [[ $($git status --porcelain) == "" ]]
     then
-      echo "(git-%{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%})"
+      echo " %{$fg_bold[blue]%}git%{$reset_color%}:(%{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%})"
     else
-      echo "(git-%{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%})"
+      echo " %{$fg_bold[blue]%}git%{$reset_color%}:(%{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%})"
     fi
   fi
 }

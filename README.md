@@ -47,9 +47,11 @@ There's a few special files in the hierarchy.
 
 ## install
 
-Run this:
+Run this (installs zsh first):
 
 ```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 git clone https://github.com/craigtaub/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap

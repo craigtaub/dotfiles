@@ -4,7 +4,7 @@ else
   export PS1='%3~$(git_info_for_prompt)%# '
 fi
 
-export LSCOLORS=gaeeee
+export LSCOLORS=hagaae
 # The color designators are as follows:
 # a     black
 # b     red
@@ -28,9 +28,9 @@ export LSCOLORS=gaeeee
 #
 # 1.   directory
 # 2.   symbolic link
-# 3.   socket
-# 4.   pipe
-# 5.   executable
+# 3.   socket (+hidden files)
+# 4.   pipe (+ background ?)
+# 5.   executable (+ background ?)
 # 6.   block special
 # 7.   character special
 # 8.   executable with setuid bit set

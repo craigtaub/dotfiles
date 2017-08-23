@@ -4,6 +4,8 @@
       "background-tips"
       "exception-reporting"
       "metrics"
+      "open-on-github"
+      "js-hyperclick"
     ]
     followSymlinks: false
     hideGitIgnoredFiles: true
@@ -22,7 +24,7 @@
     ]
   editor:
     fontFamily: "Menlo"
-    fontSize: 15
+    fontSize: 18
     invisibles: {}
     showIndentGuide: true
     softWrapAtPreferredLineLength: true

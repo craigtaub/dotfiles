@@ -21,7 +21,7 @@ brew 'youtube-dl'
 brew 'tig'
 brew 'docker'
 
-ask 'visual-studio-code'
+cask 'visual-studio-code'
 cask 'atom'
 cask 'firefox'
 cask 'google-chrome'

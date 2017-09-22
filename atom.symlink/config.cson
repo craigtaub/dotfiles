@@ -5,6 +5,9 @@
       "exception-reporting"
       "metrics"
       "open-on-github"
+      "language-javascript-jsx"
+      "linter"
+      "linter-eslint"
       "js-hyperclick"
     ]
     followSymlinks: false

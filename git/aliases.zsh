@@ -25,3 +25,5 @@ alias gac='git add -A && git commit -m'
 # mine
 alias git-push='git push origin HEAD'
 alias git-sync='git fetch origin &&  git pull origin master'
+alias git-patch-create='git diff HEAD > fix.patch --color=never'
+alias git-patch-apply='git apply fix.patch'

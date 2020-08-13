@@ -39,3 +39,6 @@ do
 done
 
 unset config_files
+
+# fuzzy search. CTRL+R
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

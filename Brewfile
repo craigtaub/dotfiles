@@ -20,6 +20,7 @@ brew 'wget'
 brew 'youtube-dl'
 brew 'tig'
 brew 'docker'
+brew 'fzf'
 
 cask 'visual-studio-code'
 cask 'atom'
